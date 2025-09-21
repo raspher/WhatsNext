@@ -1,6 +1,6 @@
-using WhatsNext.Contracts.Tasks.DTOs;
+using WhatsNext.Api.Tasks.DTOs;
 
-namespace WhatsNext.Api.Endpoints;
+namespace WhatsNext.Api.Tasks;
 
 public static class TasksEndpoints
 {

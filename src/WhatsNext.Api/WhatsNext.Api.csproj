@@ -10,8 +10,4 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\WhatsNext.Application.Contracts\WhatsNext.Application.Contracts.csproj"/>
-    </ItemGroup>
-
 </Project>

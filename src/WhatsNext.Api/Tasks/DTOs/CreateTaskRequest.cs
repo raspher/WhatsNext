@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace WhatsNext.Contracts.Tasks.DTOs;
+namespace WhatsNext.Api.Tasks.DTOs;
 
 public record CreateTaskRequest
 {

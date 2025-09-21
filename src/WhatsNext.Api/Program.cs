@@ -1,4 +1,4 @@
-using WhatsNext.Api.Endpoints;
+using WhatsNext.Api.Tasks;
 
 var builder = WebApplication.CreateBuilder(args);
 {
