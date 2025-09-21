@@ -21,4 +21,20 @@ public class CreateTaskTests : IClassFixture<WhatsNextApiFactory>
 
         Assert.Equal(HttpStatusCode.Created, response.StatusCode);
     }
+
+    [Fact]
+    public async Task should_return_400_when_creating_task_with_invalid_data()
+    {
+        var request = new { Invalid = "Data" };
+        var response = await _client.PostAsJsonAsync("/v1/tasks", request);
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+
+        var request2 = new { Title = "InvalidData" };
+        response = await _client.PostAsJsonAsync("/v1/tasks", request2);
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+
+        var request3 = new { Title = "InvalidData", Description = true };
+        response = await _client.PostAsJsonAsync("/v1/tasks", request3);
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+    }
 }
